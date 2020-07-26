@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <button id="btn">Click to switch</button>
+</body>
+<script>
+    const button =document.getElementById("btn")
+    button.addEventListener("click",()=>{
+        fetch("http://localhost:3000/switch")
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data)
+        })
+    })
+</script>
+</html>
